@@ -1,22 +1,22 @@
 package com.vytrack.tests.components.login_navigation;
 
-import org.junit.After;
+import com.google.common.base.Verify;
+import com.vytrack.utilities.BrowserFactory;
+import com.vytrack.utilities.BrowserUtils;
+import com.vytrack.utilities.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import utilities.BrowserFactory;
-import utilities.SeleniumUtils;
 
 import java.util.concurrent.TimeUnit;
 
 public class LoginTest {
+
+
 
 //1. Login to Vytrack as a store manager
 //2. Verify name of the store manager is displayed on top right
@@ -30,21 +30,23 @@ public class LoginTest {
 //10. Verify Dashboad/Quick Launchpad page is open
 //11. A different name should be displayed on top right
 
-    WebDriver driver;
+   WebDriver driver;
 
-    String usernameLocation="prependedInput";
-    String passwordLocation="prependedInput2";
+   String usernameLocation="prependedInput";
+   String passwordLocation="prependedInput2";
     String enterClickLocation="_submit";
+
     String logOutLocator="//a[@class='no-hash'][contains(text(),'Logout')]";
 
     String rightUserLocation="//a[@class='dropdown-toggle']";
-  //  String salesManagerLocation="//a[@class='dropdown-toggle'][contains(text(),'Clifton Russel')]";
+    String salesManagerLocation="//a[@class='dropdown-toggle'][contains(text(),'Clifton Russel')]";
 
     String headerLocation="//h1[@class='oro-subtitle']";
     String messageDisplayedLocation="//div[contains(text(),'Invalid user name or password')]";
 
     @BeforeMethod
     public void storeManagersetUp() {
+
         driver = BrowserFactory.getDriver("chrome");
 
         driver.manage().window().maximize();
@@ -56,6 +58,7 @@ public class LoginTest {
     @Test (priority=1)
 
 //1. Login to Vytrack as a store manager
+
     public void storeManagerTestName() {
 
         //find username location
@@ -70,26 +73,29 @@ public class LoginTest {
         WebElement click =driver.findElement(By.id (enterClickLocation));
         SeleniumUtils.clickOn(driver, click,20);
 
+
+
 //2. Verify name of the store manager is displayed on top right
 
         WebElement storeManager = driver.findElement(By.xpath(rightUserLocation));
 
 
         String expectedText = "Pearl Wuckert";
-        SeleniumUtils.waitPlease(5);    //buradaki sure sikintisi uzerine calis
+        BrowserUtils.waitPlease(5);    //buradaki sure sikintisi uzerine calis
         System.out.println(storeManager.getText());
-        SeleniumUtils.waitPlease(5);
+        BrowserUtils.waitPlease(5);
         Assert.assertTrue(storeManager.getText().contains(expectedText));
 
 
 //3. Verify Dashboard page is open
         String expectedTitle = "Dashboard";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
-
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.waitPlease(7);
 //4. Log out
-        SeleniumUtils.clickOn(driver, storeManager,20);
+        BrowserUtils.clickOn(driver, storeManager,20);
         WebElement logOut = driver.findElement(By.xpath(logOutLocator));
-        SeleniumUtils.clickOn(driver, logOut,20);
+        BrowserUtils.clickOn(driver, logOut,20);
+
     }
 
     @Test (priority=2)

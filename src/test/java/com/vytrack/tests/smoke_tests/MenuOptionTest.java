@@ -1,18 +1,12 @@
 package com.vytrack.tests.smoke_tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Ignore;
+import com.vytrack.utilities.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import utilities.BrowserFactory;
-import utilities.SeleniumUtils;
+import com.vytrack.utilities.BrowserFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -182,7 +176,7 @@ public class MenuOptionTest {
         //dashboard locator
 
         WebElement dashboard=  driver.findElement(By.xpath(dashboardLocator)) ;
-        SeleniumUtils .clickOn(driver,dashboard,20);
+        SeleniumUtils.clickOn(driver,dashboard,20);
 
         String expectedTitle="Dashboard - Dashboards";
         SeleniumUtils.checkTitle(driver,expectedTitle,20);

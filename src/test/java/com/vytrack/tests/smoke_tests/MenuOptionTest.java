@@ -1,6 +1,6 @@
 package com.vytrack.tests.smoke_tests;
 
-import com.vytrack.utilities.SeleniumUtils;
+import com.vytrack.utilities.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -49,17 +49,17 @@ public class MenuOptionTest {
 
         //find username location
         WebElement username= driver.findElement(By.id(usernameLocation));
-        SeleniumUtils.sendKeys(driver,username,20,"User151");
+        BrowserUtils.sendKeys(driver,username,20,"User151");
         //public static void sendKeys(WebDriver driver, WebElement element, int timeout, String value){
         // new WebDriverWait(driver,timeout).until(ExpectedConditions.visibilityOf(element));
 
         //find password location
         WebElement password= driver.findElement(By.id(passwordLocation));
-        SeleniumUtils.sendKeys(driver,password,20,"UserUser123");
+        BrowserUtils.sendKeys(driver,password,20,"UserUser123");
 
         //find click button location
         WebElement click =driver.findElement(By.id (enterClickLocation));
-        SeleniumUtils.clickOn(driver, click,20);
+        BrowserUtils.clickOn(driver, click,20);
 
     }
 
@@ -71,15 +71,15 @@ public class MenuOptionTest {
      //feature fleet location
 
         WebElement fleet1 =driver.findElement(By.xpath(fleetLocation));
-        SeleniumUtils.clickOn(driver,fleet1,20);
+        BrowserUtils.clickOn(driver,fleet1,20);
 
     //find location for Vehicle (it is under Fleet)
         WebElement vehicle = driver.findElement(By.xpath(vehicleLocation));
-        SeleniumUtils.clickOn(driver,vehicle,20);
+        BrowserUtils.clickOn(driver,vehicle,20);
 
         String expectedTitle="Car - Entities - System - Car - Entities - System";
 
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
     }
 
@@ -90,15 +90,15 @@ public class MenuOptionTest {
 
         //Customers locator
         WebElement customers = driver.findElement(By.xpath(customerLocator));
-        SeleniumUtils.clickOn(driver,customers,20);
+        BrowserUtils.clickOn(driver,customers,20);
 
         //account under Customer
         WebElement accounts = driver.findElement(By.xpath(accountLocation));
-        SeleniumUtils.clickOn(driver,accounts,20);
+        BrowserUtils.clickOn(driver,accounts,20);
 
         String expectedTitle="Accounts - Customers";
 
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
     }
 //    4.Navigate	to	Customers	àContacts,	verify	page	title	Contacts-Customers,	verify	page	name	Contacts(updated)
@@ -109,14 +109,14 @@ public class MenuOptionTest {
 
         //Customers locator
         WebElement customers = driver.findElement(By.xpath(customerLocator));
-        SeleniumUtils.clickOn(driver,customers,20);
+        BrowserUtils.clickOn(driver,customers,20);
 
         //Contacts locator
         WebElement contacts = driver.findElement(By.xpath(contactsLocator));
-        SeleniumUtils.clickOn(driver,contacts,20);
+        BrowserUtils.clickOn(driver,contacts,20);
 
         String expectedTitle="Contacts - Customers";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
     }
 
@@ -128,14 +128,14 @@ public class MenuOptionTest {
 
         //Activities locator
         WebElement activities = driver.findElement(By.xpath(activitiesLocator));
-        SeleniumUtils.clickOn(driver,activities,20);
+        BrowserUtils.clickOn(driver,activities,20);
 
         //Calender Events locator
         WebElement calender = driver.findElement(By.xpath(calenderLocators));
-        SeleniumUtils.clickOn(driver,calender,10);
+        BrowserUtils.clickOn(driver,calender,10);
 
         String expectedTitle="Calendar Events - Activities";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
         driver.quit();
     }
 
@@ -150,16 +150,16 @@ public class MenuOptionTest {
 
         //find username location
         WebElement username= driver.findElement(By.id(usernameLocation));
-        SeleniumUtils.sendKeys(driver,username,20,"storemanager85");
+        BrowserUtils.sendKeys(driver,username,20,"storemanager85");
 
         //find password location
         WebElement password= driver.findElement(By.id(passwordLocation));
-        SeleniumUtils.sendKeys(driver,password,20,"UserUser123");
+        BrowserUtils.sendKeys(driver,password,20,"UserUser123");
 
         //find click button location
         WebElement click =driver.findElement(By.id (enterClickLocation));
-        SeleniumUtils.clickOn(driver, click,20);
-        SeleniumUtils.waitPlease(7);
+        BrowserUtils.clickOn(driver, click,20);
+        BrowserUtils.waitPlease(7);
 
     }
     // Navigate to Dashboards à Dashboard, verify page title Dashboard - Dashboards, verify page name Dashboard
@@ -171,15 +171,15 @@ public class MenuOptionTest {
 
         //dashboards locator
         WebElement dashboards = driver.findElement(By.xpath(dashboardsLocation));
-        SeleniumUtils.clickOn(driver,dashboards,20);
+        BrowserUtils.clickOn(driver,dashboards,20);
 
         //dashboard locator
 
         WebElement dashboard=  driver.findElement(By.xpath(dashboardLocator)) ;
-        SeleniumUtils.clickOn(driver,dashboard,20);
+        BrowserUtils.clickOn(driver,dashboard,20);
 
         String expectedTitle="Dashboard - Dashboards";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
     }
 
@@ -191,14 +191,14 @@ public class MenuOptionTest {
 
         //find location for Fleet
         WebElement fleet =driver.findElement(By.xpath(fleetLocation));
-        SeleniumUtils.clickOn(driver,fleet,20);
+        BrowserUtils.clickOn(driver,fleet,20);
 
         //find location for Vehicle
         WebElement vehicle = driver.findElement(By.xpath(vehicleLocation));
-        SeleniumUtils.clickOn(driver,vehicle,20);
+        BrowserUtils.clickOn(driver,vehicle,20);
 
         String expectedTitle="All - Car - Entities - System - Car - Entities - System";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
     }
 
     //  Navigate to Customersà Accounts, verify page title All - Accounts – Customers, verify page name All Accounts(updated)
@@ -208,15 +208,15 @@ public class MenuOptionTest {
 
         //Customers locator
         WebElement customers = driver.findElement(By.xpath(customerLocator));
-        SeleniumUtils.clickOn(driver,customers,20);
+        BrowserUtils.clickOn(driver,customers,20);
 
         //account under Customer
         WebElement accounts = driver.findElement(By.xpath(accountLocation));
-        SeleniumUtils.clickOn(driver,accounts,20);
+        BrowserUtils.clickOn(driver,accounts,20);
 
 
         String expectedTitle="All - Accounts - Customers";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
 
     }
@@ -227,14 +227,14 @@ public class MenuOptionTest {
 
         //Customers locator
         WebElement customers = driver.findElement(By.xpath(customerLocator));
-        SeleniumUtils.clickOn(driver,customers,20);
+        BrowserUtils.clickOn(driver,customers,20);
 
         //Contacts locator
         WebElement contacts = driver.findElement(By.xpath(contactsLocator));
-        SeleniumUtils.clickOn(driver,contacts,20);
+        BrowserUtils.clickOn(driver,contacts,20);
 
         String expectedTitle="All - Contacts - Customers";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
 
     }
@@ -246,16 +246,16 @@ public class MenuOptionTest {
 
         //sales locator
         WebElement sales= driver.findElement(By.xpath(salesLocator));
-        SeleniumUtils.clickOn(driver, sales,20);
+        BrowserUtils.clickOn(driver, sales,20);
 
         //Opportunies
 
         WebElement opportunies= driver.findElement(By.xpath(opportunitiesLocator));
-        SeleniumUtils.clickOn(driver,opportunies,20);
+        BrowserUtils.clickOn(driver,opportunies,20);
 
         //Verify title
         String expectedTitle="Open Opportunities - Opportunities - Sales";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
         //verify Page Name
         WebElement opportuniesHeader=driver.findElement(By.xpath(headerLocation));
@@ -272,15 +272,15 @@ public class MenuOptionTest {
         //Activities locators
 
         WebElement activies= driver.findElement(By.xpath(activitiesLocator));
-        SeleniumUtils.clickOn(driver,activies,20);
+        BrowserUtils.clickOn(driver,activies,20);
 
         //Calls locators
         WebElement calls= driver.findElement(By.xpath(callsLocator));
-        SeleniumUtils.clickOn(driver,calls,20);
+        BrowserUtils.clickOn(driver,calls,20);
 
         //Verify title
         String expectedTitle="All - Calls - Activities";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
         //verify Page Name
         WebElement callsHeader=driver.findElement(By.xpath(headerLocation));
@@ -297,16 +297,16 @@ public class MenuOptionTest {
      //Activities locators
 
         WebElement activies= driver.findElement(By.xpath(activitiesLocator));
-        SeleniumUtils.clickOn(driver,activies,20);
+        BrowserUtils.clickOn(driver,activies,20);
 
      //CalenderEvents locators
 
         WebElement calenderEvents= driver.findElement(By.xpath(calenderEventsLocators));
-        SeleniumUtils.clickOn(driver,calenderEvents,20);
+        BrowserUtils.clickOn(driver,calenderEvents,20);
 
      //Verify title
         String expectedTitle="All - Calendar Events - Activities";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
 
      //verify Page Name
@@ -316,6 +316,7 @@ public class MenuOptionTest {
         driver.quit();
 
     }
+
 //    @AfterGroups (groups= {"a"})
 //
 //    public void tearDown(){

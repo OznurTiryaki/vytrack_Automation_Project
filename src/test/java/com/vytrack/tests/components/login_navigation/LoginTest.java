@@ -1,20 +1,13 @@
 package com.vytrack.tests.components.login_navigation;
 
-import com.google.common.base.Verify;
-import com.vytrack.utilities.BrowserFactory;
 import com.vytrack.utilities.BrowserUtils;
-import com.vytrack.utilities.SeleniumUtils;
+import com.vytrack.utilities.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class LoginTest {
+public class LoginTest extends TestBase {
 
 
 
@@ -30,7 +23,7 @@ public class LoginTest {
 //10. Verify Dashboad/Quick Launchpad page is open
 //11. A different name should be displayed on top right
 
-   WebDriver driver;
+//  WebDriver driver;
 
    String usernameLocation="prependedInput";
    String passwordLocation="prependedInput2";
@@ -44,16 +37,16 @@ public class LoginTest {
     String headerLocation="//h1[@class='oro-subtitle']";
     String messageDisplayedLocation="//div[contains(text(),'Invalid user name or password')]";
 
-    @BeforeMethod
-    public void storeManagersetUp() {
-
-        driver = BrowserFactory.getDriver("chrome");
-
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get("http://qa2.vytrack.com/user/login");
-
-    }
+//    @BeforeMethod
+//    public void storeManagersetUp() {
+//
+//        driver = BrowserFactory.getDriver("chrome");
+//
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//        driver.get("http://qa2.vytrack.com/user/login");
+//
+//    }
 
     @Test (priority=1)
 
@@ -63,15 +56,15 @@ public class LoginTest {
 
         //find username location
         WebElement username= driver.findElement(By.id(usernameLocation));
-        SeleniumUtils.sendKeys(driver,username,20,"storemanager85");
+        BrowserUtils.sendKeys(driver,username,20,"storemanager85");
 
         //find password location
         WebElement password= driver.findElement(By.id(passwordLocation));
-        SeleniumUtils.sendKeys(driver,password,20,"UserUser123");
+        BrowserUtils.sendKeys(driver,password,20,"UserUser123");
 
         //find click button location
         WebElement click =driver.findElement(By.id (enterClickLocation));
-        SeleniumUtils.clickOn(driver, click,20);
+        BrowserUtils.clickOn(driver, click,20);
 
 
 
@@ -104,15 +97,15 @@ public class LoginTest {
 
         //find username location
         WebElement username= driver.findElement(By.id(usernameLocation));
-        SeleniumUtils.sendKeys(driver,username,20,"salesmanager252");
+        BrowserUtils.sendKeys(driver,username,20,"salesmanager252");
 
         //find password location
         WebElement password= driver.findElement(By.id(passwordLocation));
-        SeleniumUtils.sendKeys(driver,password,20,"UserUser123");
+        BrowserUtils.sendKeys(driver,password,20,"UserUser123");
 
         //find click button location
         WebElement click =driver.findElement(By.id (enterClickLocation));
-        SeleniumUtils.clickOn(driver, click,20);
+        BrowserUtils.clickOn(driver, click,20);
 
 
         //7. A different name should be displayed on top right
@@ -120,15 +113,15 @@ public class LoginTest {
         WebElement salesManager = driver.findElement(By.xpath(rightUserLocation));
 
         String expectedText = "Clifton Russel";
-        SeleniumUtils.waitPlease(5);
+        BrowserUtils.waitPlease(5);
         System.out.println(salesManager.getText());
-        SeleniumUtils.waitPlease(5);
+        BrowserUtils.waitPlease(5);
         Assert.assertTrue(salesManager.getText().contains(expectedText));
 
 //4. Log out
-        SeleniumUtils.clickOn(driver, salesManager,20);
+        BrowserUtils.clickOn(driver, salesManager,20);
         WebElement logOut = driver.findElement(By.xpath(logOutLocator));
-        SeleniumUtils.clickOn(driver, logOut,20);
+        BrowserUtils.clickOn(driver, logOut,20);
 
     }
 
@@ -139,15 +132,15 @@ public class LoginTest {
 
         //find username location
         WebElement username= driver.findElement(By.id(usernameLocation));
-        SeleniumUtils.sendKeys(driver,username,20,"User151");
+        BrowserUtils.sendKeys(driver,username,20,"User151");
 
         //find password location
         WebElement password= driver.findElement(By.id(passwordLocation));
-        SeleniumUtils.sendKeys(driver,password,20,"UserUser123");
+        BrowserUtils.sendKeys(driver,password,20,"UserUser123");
 
         //find click button location
         WebElement click =driver.findElement(By.id (enterClickLocation));
-        SeleniumUtils.clickOn(driver, click,20);
+        BrowserUtils.clickOn(driver, click,20);
 
 //10. Verify Dashboad/Quick Launchpad page is open
 
@@ -157,19 +150,19 @@ public class LoginTest {
         Assert.assertTrue(header.getText().contains(expectedTextHeader));
 
         String expectedTitle = "Dashboard";
-        SeleniumUtils.checkTitle(driver,expectedTitle,20);
+        BrowserUtils.checkTitle(driver,expectedTitle,20);
 
 //11. A different name should be displayed on top right
         WebElement driverName = driver.findElement(By.xpath(rightUserLocation));
 
         String expectedName = "Clifton Russel";
         Assert.assertFalse(driverName.getText().contains(expectedName));
-        SeleniumUtils.waitPlease(5);
+        BrowserUtils.waitPlease(5);
 
 //12. Log out
-        SeleniumUtils.clickOn(driver, driverName,20);
+        BrowserUtils.clickOn(driver, driverName,20);
         WebElement logOut = driver.findElement(By.xpath(logOutLocator));
-        SeleniumUtils.clickOn(driver, logOut,20);
+        BrowserUtils.clickOn(driver, logOut,20);
 
     }
 //TEST CASE: Login test (negative)
@@ -183,15 +176,15 @@ public class LoginTest {
 
         //find username location
         WebElement username= driver.findElement(By.id(usernameLocation));
-        SeleniumUtils.sendKeys(driver,username,20,"storemanager85");
+        BrowserUtils.sendKeys(driver,username,20,"storemanager85");
 
         //find password location
         WebElement password= driver.findElement(By.id(passwordLocation));
-        SeleniumUtils.sendKeys(driver,password,20,"Cybertek123");
+        BrowserUtils.sendKeys(driver,password,20,"Cybertek123");
 
         //find click button location
         WebElement click =driver.findElement(By.id (enterClickLocation));
-        SeleniumUtils.clickOn(driver, click,20);
+        BrowserUtils.clickOn(driver, click,20);
 
 //4. Message Invalid user name or password. should be displayed
 
@@ -200,21 +193,21 @@ public class LoginTest {
 
         String expectedmessageDisplayedText="Invalid user name or password";
         Assert.assertTrue(messageDisplayed.getText().contains(expectedmessageDisplayedText));
-        SeleniumUtils.waitPlease(5);
+        BrowserUtils.waitPlease(5);
 
 //5. Page title and url should be same
 
         String afterLogInUrl=driver.getCurrentUrl();
         Assert.assertEquals(beforeLogInUrl,afterLogInUrl);
-        SeleniumUtils.waitPlease(5);
+        BrowserUtils.waitPlease(5);
         String afterLogInTitle=driver.getTitle();
         Assert.assertEquals(beforeLogInTitle,afterLogInTitle);
     }
 
-    @AfterMethod
-    public void tearDown(){
-        driver.quit();
-
-    }
+//    @AfterMethod
+//    public void tearDown(){
+//        driver.quit();
+//
+//    }
 
 }

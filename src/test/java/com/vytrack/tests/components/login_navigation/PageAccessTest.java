@@ -1,6 +1,7 @@
 package com.vytrack.tests.components.login_navigation;
 
 import com.vytrack.utilities.BrowserUtils;
+import com.vytrack.utilities.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,9 +13,9 @@ import com.vytrack.utilities.BrowserFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class PageAccessTest {
+public class PageAccessTest extends TestBase {
 
-    WebDriver driver;
+   // WebDriver driver;
 
     String usernameLocation="prependedInput";
     String passwordLocation="prependedInput2";
@@ -23,15 +24,15 @@ public class PageAccessTest {
     String fleetLocation="(//li[@class='dropdown dropdown-level-1'])[1]";
     String vehicleContractsLocation="//span[@class='title title-level-2'][contains(text(),'Vehicle Contracts')]";
     String messageLocation="//div[@class='message'][contains(text(),'You do not have permission to perform this action.')]";
-
-    @BeforeMethod
-    public void storeManagersetUp() {
-        driver = BrowserFactory.getDriver("chrome");
-
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("http://qa2.vytrack.com/user/login");
-    }
+//
+//    @BeforeMethod
+//    public void storeManagersetUp() {
+//        driver = BrowserFactory.getDriver("chrome");
+//
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//        driver.get("http://qa2.vytrack.com/user/login");
+//    }
 //  1.  Login to Vytrack as a store manager
 
     @Test (priority = 1)
@@ -133,8 +134,8 @@ public class PageAccessTest {
         Assert.assertEquals(expectedmessage, actualmessage);
     }
 
-    @AfterMethod
-    public void tearDown () {
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown () {
+//        driver.quit();
+//    }
 }

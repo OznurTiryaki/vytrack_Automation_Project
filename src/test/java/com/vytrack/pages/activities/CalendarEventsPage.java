@@ -67,7 +67,7 @@ public class CalendarEventsPage {
     @FindBy(css="label[class='fields-row']>input[data-related-field='occurrences']")
     public WebElement afterOccurenceLocator;
 
-    @FindBy(css = ".validation-failed>span" )
+    @FindBy(xpath = "//span[@id='temp-validation-name-564-error']//span[contains(text(),'This value should not be blank.')]" )
     public WebElement boundyValueAttentionAfterOccurences;
 
     @FindBy(xpath = "//span[@class='validation-failed']")

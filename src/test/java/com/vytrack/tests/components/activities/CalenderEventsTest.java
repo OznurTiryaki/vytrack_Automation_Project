@@ -292,6 +292,7 @@ public class CalenderEventsTest extends TestBase {
 
         BrowserUtils.waitPlease(3);
 
+
         BrowserUtils.sendKeys(calendarPage.repeatEveryLocator, 10, n);
 
 
@@ -310,6 +311,8 @@ public class CalenderEventsTest extends TestBase {
 
         calendarPage.afterOccurenceLocator.click();
 
+        BrowserUtils.waitPlease(3);
+
         BrowserUtils.sendKeys(calendarPage.afterOccurenceLocator, 10, n);
 
         calendarPage.afterOccurenceLocator.clear();
@@ -326,11 +329,13 @@ public class CalenderEventsTest extends TestBase {
 
         String n2 = num2 + "";
 
+
+        calendarPage.afterOccurenceLocator.click();
+
         BrowserUtils.sendKeys(calendarPage.afterOccurenceLocator, 10, n2);
 
 //12. Message This value should not be blank. should disappear
 
-        BrowserUtils.waitFor(3);
 
         Assert.assertTrue(calendarPage.boundyValueAttentionAfterOccurences.getText().equals(""));
     }

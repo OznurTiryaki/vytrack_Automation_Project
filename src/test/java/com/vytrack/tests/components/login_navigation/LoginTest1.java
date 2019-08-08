@@ -1,12 +1,8 @@
 package com.vytrack.tests.components.login_navigation;
 
-import com.vytrack.pages.LoginPage;
-import com.vytrack.utilities.BrowserUtils;
+import com.vytrack.pages.login_navigation.LoginPage;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.TestBase;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 

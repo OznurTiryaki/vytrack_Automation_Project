@@ -1,4 +1,4 @@
-package com.vytrack.pages;
+package com.vytrack.pages.login_navigation;
 
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.ConfigurationReader;

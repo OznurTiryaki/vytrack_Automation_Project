@@ -1,27 +1,15 @@
 package com.vytrack.tests.components.activities;
 
-import com.google.common.base.Verify;
-import com.vytrack.pages.LoginPage;
 import com.vytrack.pages.activities.CalendarEventsPage;
-import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.TestBase;
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
-import org.apache.commons.logging.Log;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.annotations.TestInstance;
 
-import java.util.Calendar;
 import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Random;
 
 public class CalenderEventsTest extends TestBase {
 

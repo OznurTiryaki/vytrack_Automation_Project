@@ -47,7 +47,7 @@ public class EmployeesDBTest {
 
          Assert.assertEquals( empData.get(0).get("FIRST_NAME"),"David");
          Assert.assertEquals( empData.get(0).get("LAST_NAME"),"Austin");
-
+         System.out.println("test");
 
          DBUtility.closeConnections();
 

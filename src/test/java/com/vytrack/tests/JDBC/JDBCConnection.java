@@ -1,4 +1,4 @@
-package com.vytrack.tests.smoke_tests.JDBC;
+package com.vytrack.tests.JDBC;
 
 import org.testng.annotations.Test;
 
@@ -17,7 +17,7 @@ public class JDBCConnection {
     String oracleDBUserName = "hr";
     String oracleDBPassword = "hr";
 
-    @Test(enabled = true)
+    @Test()
     public void oracleJDBC() throws SQLException {
 
         // Connection -> helps connect to database

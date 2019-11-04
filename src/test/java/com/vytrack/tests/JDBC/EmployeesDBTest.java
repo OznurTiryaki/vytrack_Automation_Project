@@ -1,4 +1,4 @@
-package com.vytrack.tests.smoke_tests.JDBC;
+package com.vytrack.tests.JDBC;
 
 import com.vytrack.utilities.DBType;
 import com.vytrack.utilities.DBUtility;

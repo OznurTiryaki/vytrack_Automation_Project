@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d93054a7-288b-40e3-bc77-84f4fc05c7a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/api/APIDay3_GSON.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/api/APIDay3_JsonPath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/api/APIDay4_PostMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/api/APIDay4_WarmUpTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/api/APIDay5_POSTthenGET.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/api/HRRestAPIGetRequests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/api/Region.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/api/RegionResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom copy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom copy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/smoke_tests/JDBC/EmployeesDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/JDBC/EmployeesDBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/smoke_tests/JDBC/JDBCConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/JDBC/JDBCConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/vytrack-automation.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/smoke_tests/JDBC/EmployeesDBTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/smoke_tests/JDBC/JDBCConnection.class" beforeDir="false" />
-    </list>
+    <list default="true" id="d93054a7-288b-40e3-bc77-84f4fc05c7a7" name="Default Changelist" comment="updated version" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565302300669</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated version">
+      <created>1572892988906</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572892988906</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

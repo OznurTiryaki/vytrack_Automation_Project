@@ -96,7 +96,7 @@ public class APIDay5_POSTthenGET {
     response=given().accept(ContentType.JSON)
             .when().get(url+randomId);
 
-    Assert.assertEquals(response.statusCode(),200);  //ekledikten sonra codunun  200 olmasi gerekiyor
+    Assert.assertEquals(response.statusCode(),200);
 
     Map getResMap=response.body().as(Map.class);
 
